@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  background-color: var(--color-body);
+}
+
+:root {
+  --color-body: #f5f5f5;
+  --color-interCalc: #f8f8f8;
+  --color-TextInput: #96abff;
+  --color-btnClear: #f7382e;
+  --color-btnSoma: #1aa726;
+  --color-textBtn: #757370;
+  --color-equal: #3254df;
+  --color-shadow: #e0e0e0;
+}
+
+main {
+  width: 20rem;
+  height: 27rem;
+  background-color: var(--color-interCalc);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: none;
+  gap: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 5px #e2e2e2;
+}
+
+input {
+  height: 2.5rem;
+  width: 18rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: right;
+  border-radius: 9px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 8px 1px #e0e0e0;
+  
+}
+
+#inputCalc {
+  color: var(--color-TextInput);
+}
+
+#inputCalc:hover {
+  box-shadow: inset 0px 0px 10px 1px #d4e2f7;
+  transition: 0.9s;
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: inset 0px 0px 10px 1px #d4e2f7;
+  border-radius: 9px;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows:
+    [row1-start]40px [row2-start]40px [row3-start]40px
+    [row4-start]40px [row5-start]40px;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+button {
+  border: none;
+  border-radius: 9px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-textBtn);
+  cursor: pointer;
+  box-shadow: 0px 0px 11px 3px #e0e0e0;
+  background-color: transparent;
+}
+
+.btns .soma {
+  grid-row: 2/4;
+  grid-column: 4/5;
+  background-color: var(--color-btnSoma);
+  color: var(--color-interCalc);
+}
+
+.btns #equal {
+  grid-row: 4/6;
+  grid-column: 4/5;
+  background-color: var(--color-equal);
+  color: var(--color-interCalc);
+}
+
+.btns .backspace {
+  background-color: var(--color-btnClear);
+  color: #f8f8f8;
+}
+
+section {
+  display: flex;
+}
+
+section > button {
+  width: 3.5rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: default;
+}
+
+#resultado {
+  color: var(--color-textBtn);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 14.5rem;
+  cursor: default;
+}
+
+.resultError {
+  box-shadow: inset 0px 0px 10px 1px #df3333;
+  transition: 0.9s;
+}
+
+.resultCorreto {
+  box-shadow: inset 0px 0px 10px 1px #58f060;
+  transition: 0.9s;
+}
+
+
